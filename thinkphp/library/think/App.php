@@ -284,9 +284,6 @@ class App
             if ($module) {
                 Lang::load($path . 'lang' . DS . Request::instance()->langset() . EXT);
             }
-            if (!preg_match('/^[A-Za-z](\w|\.)*$/', $controller)) {
-              throw new HttpException(404, 'controller not exists:' . $controller);
-            }
         }
 
         return Config::get();
